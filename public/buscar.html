@@ -86,6 +86,7 @@ const status = document.getElementById('status');
 const queuePanel = document.getElementById('queuePanel');
 let timer = null;
 let lastAddedUri = null;
+let refreshInterval = null;
 
 q.addEventListener('input', () => {
   clearTimeout(timer);
@@ -137,6 +138,7 @@ async function addToQueue(uri, name) {
       showStatus('✅ "' + name + '" agregada a la fila');
       lastAddedUri = uri;
       setTimeout(loadQueueStatus, 1200);
+      startAutoRefresh();
     } else {
       showStatus('❌ No se pudo agregar. Intenta otra vez.');
     }
@@ -152,6 +154,11 @@ async function loadQueueStatus() {
     const data = await res.json();
     renderQueue(data);
   } catch (e) {}
+}
+
+function startAutoRefresh() {
+  if (refreshInterval) return;
+  refreshInterval = setInterval(loadQueueStatus, 10000);
 }
 
 function renderQueue(data) {
