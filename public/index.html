@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bienvenido al viaje</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 100%; overflow-x: hidden; }
+  body {
+    font-family: -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    background: linear-gradient(160deg, #121212, #1e3a2f);
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  .card {
+    max-width: 480px;
+    width: 100%;
+    box-sizing: border-box;
+    background: #1a1a1a;
+    border-radius: 20px;
+    padding: 26px 20px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+  }
+  h1 { font-size: 24px; margin-bottom: 6px; }
+  .subtitle { color: #b3b3b3; font-size: 15px; margin-bottom: 24px; }
+  .section { background: #242424; border-radius: 12px; padding: 16px 18px; margin-bottom: 14px; }
+  .section h2 { font-size: 15px; color: #1DB954; margin-bottom: 6px; }
+  .section p { font-size: 14px; color: #e0e0e0; line-height: 1.5; }
+  .section img { width: 100%; border-radius: 10px; margin-top: 10px; }
+  .btn {
+    display: block;
+    text-align: center;
+    background: #1DB954;
+    color: #000;
+    font-weight: 700;
+    font-size: 16px;
+    padding: 16px;
+    border-radius: 30px;
+    text-decoration: none;
+    margin-top: 24px;
+  }
+</style>
+</head>
+<body>
+  <div class="card">
+    <h1>¡Bienvenido(a)! 👋</h1>
+    <p class="subtitle">Antes de arrancar, aquí tienes información útil del vehículo.</p>
+
+    <div class="section">
+      <h2>🪟 Manual de vidrios eléctricos</h2>
+      <p>Aquí encuentras los controles de los vidrios eléctricos:</p>
+      <img src="vidrios.png" alt="Manual de vidrios eléctricos">
+      <p style="margin-top:10px;">🔒 Recuerda abrochar tu cinturón de seguridad.</p>
+    </div>
+
+    <div class="section">
+      <h2>✨ Creado con Inteligencia Artificial</h2>
+      <p>Tanto las imágenes, como esta página, como su funcionamiento fueron creados con ayuda de la IA. Si tú también necesitas software, publicidad o automatización para tu negocio, escríbeme:</p>
+      <a class="btn" href="https://wa.me/573158560967" target="_blank" style="margin-top:12px;">💬 Escríbeme al WhatsApp</a>
+    </div>
+
+    <a class="btn" href="buscar.html">🎵 Pedir una canción</a>
+  </div>
+</body>
+</html>
